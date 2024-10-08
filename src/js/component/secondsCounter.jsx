@@ -1,19 +1,19 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({digito}) => {
 	return (
-
 		<div className="card-body bg-black">
-		  <h5 className="card-title">Primary card title</h5>
+		  <h5 className="card-title">{digito}</h5>
 		</div>
 	);
   };
 
   const SecondsCounter = (props) => {
     return (
-
         <div className="d-flex" >
-            <h1>{props.counter}</h1>
+            <div className="card-body bg-black">
+              <i className="far fa-clock"></i>
+            </div>
             <Card digito={Math.floor(props.counter/100000 %10)} />
             <Card digito={Math.floor(props.counter/10000 %10)} />
             <Card digito={Math.floor(props.counter/1000 %10)} />

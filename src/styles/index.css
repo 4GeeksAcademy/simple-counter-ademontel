@@ -10,3 +10,18 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.card-body {
+    display: flex !important;
+    margin: 1%;
+    width: 6.5vh;
+    height: 10vh;
+    border-radius: 1vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    font-size: 5vh;
+}
+.card-title{
+    font-size: 50px;
+}
