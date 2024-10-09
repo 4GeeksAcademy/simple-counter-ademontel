@@ -24,4 +24,8 @@ const Card = ({digito}) => {
     )
   }
 
+  
+
+  
   export {Card, SecondsCounter};
+
