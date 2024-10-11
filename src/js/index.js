@@ -43,6 +43,7 @@ const renderSecondsCounter = () => {
                     <button
                         onClick={() => {
                             clearInterval(intervalo);
+                            intervalo = undefined;
                         }}
                         type="button"
                         className="btn m-2 rounded btn-secondary w-25"
@@ -61,7 +62,9 @@ const renderSecondsCounter = () => {
                     </button>
                     <button
                         onClick={() => {
-                            intervalo = setInterval(renderSecondsCounter, 1000);
+                            if (!intervalo) {
+                                intervalo = setInterval(renderSecondsCounter, 1000);
+                            }
                         }}
                         type="button"
                         className="btn m-2 rounded btn-secondary w-25"
